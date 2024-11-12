@@ -9,6 +9,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] float dist;
     [SerializeField] private Camera mCam;
     [SerializeField] BoomScript mBoom;
+
+    Vector3 mLookAt;
     /*camera rotates on the spot*/
     void Update()
     {
@@ -27,6 +29,11 @@ public class CameraMovement : MonoBehaviour
         }
         // camera rotates about the y axis
         // GetComponent<Transform>.Rotation(mouPos);
+
+        // update where camera is supposed to look
+        mLookAt = mBoom.mbase;
+        // Debug.Log("pos (from update) is now: " + mLookAt);
+        CameraLookAt(mLookAt);
     }
     
     /// <summary>
@@ -95,4 +102,19 @@ public class CameraMovement : MonoBehaviour
     }
     
     /*when mouse clicks on an object which is not MC, the camera will zoom in on it, when reaching a value, it will pause*/
+
+    /// <summary>
+    /// Angles the camera towards mBoom.mBase (LookAt) Vector3
+    /// </summary>
+    /// <param name="pos">Vector3 LookAt from mBoom.mBase</param>
+    void CameraLookAt(Vector3 pos)
+    {
+        /// resource for figuring out angles: https://www.youtube.com/watch?v=RQHG_Tv9vzA
+        transform.rotation = Quaternion.LookRotation(pos - transform.position, Vector3.up);
+        // Debug.Log("pos (from method) is now: " + pos);
+        // Quaternion.SetFromToRotation(this.transform.position, -pos);
+
+        Debug.Log("this. identity rotation: " + Quaternion.identity);
+
+    }
 }

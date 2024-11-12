@@ -30,6 +30,9 @@ public class BoomScript : MonoBehaviour
     // distances between camera and object
     public const float maxDistance = 25.0f;
     public const float minDistance = 5.0f;
+
+    // where the camera should be pointed towards
+    [SerializeField] public Vector3 mbase;
     // MC position
     private Vector3 MCpos;
     // Camera position
@@ -44,6 +47,7 @@ public class BoomScript : MonoBehaviour
         if (transform.parent != null)
         {
             MCpos = transform.parent.Find("body").position;
+            mbase = MCpos;
         }
         if (this.transform != null)
         {
