@@ -114,7 +114,7 @@ public class CameraMovement : MonoBehaviour
         // Debug.Log("pos (from method) is now: " + pos);
         // Quaternion.SetFromToRotation(this.transform.position, -pos);
 
-        Debug.Log("this. identity rotation: " + Quaternion.identity);
+        // Debug.Log("this. identity rotation: " + Quaternion.identity);
 
     }
 }

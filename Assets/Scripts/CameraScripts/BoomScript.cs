@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class BoomScript : MonoBehaviour
      * Where is camera? ✅
      * decide the distance between MC and camera - max and min distance(absolute values) ✅ */
 
-    /*zoom in and out by scrolling mousewheel*/
+    /*zoom in and out by scrolling mousewheel ✅*/
 
     /*detect other objects that can be focused on*/
 
@@ -66,6 +67,21 @@ public class BoomScript : MonoBehaviour
             Debug.Log("boom too long");
             this.transform.position = SetCamPos(0);
         }
+
+        // is the guard to check if middle mouse button is being held down
+        /// resource for keyCodes: https://docs.unity3d.com/ScriptReference/KeyCode.html
+        if (Input.GetKey(KeyCode.Mouse2))
+        {
+            Debug.Log("The middleMouse button is being held down!");
+            SwingBoom();
+        }
+
+    }
+
+    void SwingBoom()
+    {
+        float mouseX_value = Math.Clamp(Input.GetAxis("Mouse X"), -1, 1);
+        Debug.Log("Mouse is turned in x axis!" + mouseX_value);
     }
 
     /// <summary>

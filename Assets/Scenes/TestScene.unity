@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd91a8b52a9e0a46bed24aa9816f6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mbase: {x: 0, y: 0, z: 0}
   currentDistance: 0
 --- !u!1 &600127632
 GameObject:
