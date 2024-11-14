@@ -40,6 +40,7 @@ public class BoomScript : MonoBehaviour
     private Vector3 CAMpos;
     // distance between MC and CAM positions
     [SerializeField] private float currentDistance;
+    [SerializeField] GameObject mCamera;
 
     // Update is called once per frame
     void Update()
@@ -75,13 +76,15 @@ public class BoomScript : MonoBehaviour
             Debug.Log("The middleMouse button is being held down!");
             SwingBoom();
         }
-
+        TestRotateAround();
     }
 
     void SwingBoom()
     {
+        // the speed of the mouse moving in X axis
         float mouseX_value = Math.Clamp(Input.GetAxis("Mouse X"), -1, 1);
-        Debug.Log("Mouse is turned in x axis!" + mouseX_value);
+        // Debug.Log("Mouse is turned in x axis!" + mouseX_value);
+        // mouseX_value gives speed of movement AND direction (+/-)
     }
 
     /// <summary>
@@ -139,6 +142,15 @@ public class BoomScript : MonoBehaviour
     public void SetCamPosScroll(Vector3 goalPos)
     {
         this.transform.position = goalPos;
+    }
+
+
+    void TestRotateAround()
+    {
+        float angle = Quaternion.Angle(mCamera.transform.rotation, transform.parent.Find("body").rotation);
+        Vector3 axis = transform.up;
+        Vector3 point = mCamera.transform.position;
+        transform.RotateAround(transform.parent.Find("body").position, new Vector3(0,1,0), 20*Time.deltaTime);
     }
 }
 
