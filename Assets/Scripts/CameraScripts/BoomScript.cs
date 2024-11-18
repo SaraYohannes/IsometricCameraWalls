@@ -42,6 +42,8 @@ public class BoomScript : MonoBehaviour
     [SerializeField] private float currentDistance;
     [SerializeField] GameObject mCamera;
 
+    private float yrotateCounter;
+
     // Update is called once per frame
     void Update()
     {
@@ -76,15 +78,14 @@ public class BoomScript : MonoBehaviour
             Debug.Log("The middleMouse button is being held down!");
             SwingBoom();
         }
-        TestRotateAround();
     }
 
     void SwingBoom()
     {
         // the speed of the mouse moving in X axis
-        float mouseX_value = Math.Clamp(Input.GetAxis("Mouse X"), -1, 1);
-        // Debug.Log("Mouse is turned in x axis!" + mouseX_value);
-        // mouseX_value gives speed of movement AND direction (+/-)
+        float mouseX_value = Input.GetAxis("Mouse X");
+        float mouseY_value = Input.GetAxis("Mouse Y");
+        RotateAroundPoint(mouseX_value, mouseY_value);
     }
 
     /// <summary>
@@ -145,12 +146,36 @@ public class BoomScript : MonoBehaviour
     }
 
 
-    void TestRotateAround()
+    /// <summary>
+    /// Rotates camera around a pivot point in the scene. Uses
+    /// transform.RotateAround to pivot camera in X and Y direction. Has 
+    /// max and min y angles, uses global float (yrotateCounter) to clamp 
+    /// rotation in y direction.
+    /// </summary>
+    /// <param name="xdir">Input from getAxis(Mouse X)</param>
+    /// <param name="ydir">Input from getAxis(Mouse Y)</param>
+    void RotateAroundPoint(float xdir, float ydir)
     {
-        float angle = Quaternion.Angle(mCamera.transform.rotation, transform.parent.Find("body").rotation);
-        Vector3 axis = transform.up;
-        Vector3 point = mCamera.transform.position;
-        transform.RotateAround(transform.parent.Find("body").position, new Vector3(0,1,0), 20*Time.deltaTime);
+        float maxY = 60.0f;
+        float minY = 30.0f;
+
+        float xspeed = xdir * 30 * Time.deltaTime;
+        float yspeed = ydir * 30 * Time.deltaTime;
+        
+        if (yrotateCounter + yspeed > maxY)
+        {
+            yspeed = maxY - yrotateCounter;
+        }
+        else if (yrotateCounter + yspeed < minY)
+        {
+            yspeed = minY - yrotateCounter;
+        }
+
+        transform.RotateAround(transform.parent.Find("body").position, new Vector3(0, 1, 0), xspeed);
+
+        transform.RotateAround(transform.parent.Find("body").position, new Vector3(1, 0, 0), yspeed);
+
+        yrotateCounter += yspeed;
     }
 }
 
