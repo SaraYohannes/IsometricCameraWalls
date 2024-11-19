@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 0}
-  mBoom: {fileID: 0}
+  mBoom: {fileID: 527305264}
 --- !u!1 &600127632
 GameObject:
   m_ObjectHideFlags: 0
