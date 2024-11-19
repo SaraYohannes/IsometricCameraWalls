@@ -42,6 +42,9 @@ public class BoomScript : MonoBehaviour
     [SerializeField] private float currentDistance;
     [SerializeField] GameObject mCamera;
 
+    // object the player has selected
+    [SerializeField] public GameObject mSelectedObj;
+
     private float yrotateCounter;
 
     // Update is called once per frame
