@@ -5,6 +5,8 @@
 body {
     display: grid;
     gap: 10px;
+    grid-template-rows: 19% 84% 4%;
+    grid-template-columns: 19% 49% 29%;
     background-color: whitesmoke;
 }
 
