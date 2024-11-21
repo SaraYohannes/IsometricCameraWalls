@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
+    border: none;
 }
 
 body {
@@ -7,8 +9,8 @@ body {
     gap: 10px;
     grid-template-rows: 19% 84% 4%;
     grid-template-columns: 19% 49% 29%;
-    height: 100%;
-    width: auto;
+    height: 100vh;
+    width: 100vw;
     background-color: whitesmoke;
 }
 
