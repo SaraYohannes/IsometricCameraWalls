@@ -9,6 +9,7 @@ body {
     grid-template-columns: 20% 50% 30%;
     height: 100%;
     width: 100vw;
+    padding: 2px;
     background-color: whitesmoke;
 }
 
