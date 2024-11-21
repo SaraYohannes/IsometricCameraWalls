@@ -66,15 +66,6 @@ public class BoomScript : MonoBehaviour
         // this variable is used by CameraMovement.cs
         mbase = focusPos;
 
-        /*
-        * // continusly update MCs position
-        * if (transform.parent != null)
-        * {
-        *     MCpos = transform.parent.Find("body").position;
-        *     mbase = MCpos;
-        * }
-        */
-
         // continously update camera position
         if (this.transform != null)
         {
