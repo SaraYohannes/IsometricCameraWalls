@@ -11,16 +11,21 @@ body {
     width: 100vw;
     padding: 2px;
     background-color: whitesmoke;
-    overflow:clip;
+    overflow: hidden;
 }
 
 header {
+    display: flex;
     grid-area: 1/1/span 1/span 3;
     background-color: lightpink;
+    justify-content: center;
+    align-content: center;
 }
 
 section {
-
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 article {
@@ -36,8 +41,11 @@ figure {
 }
 
 footer {
+    display: flex;
     grid-area: 3/2/span 1/span2;
     background-color: lightgreen;
+    justify-content: center;
+    align-content: center;
 }
 
 #contactadd {
