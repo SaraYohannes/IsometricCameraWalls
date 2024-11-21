@@ -9,6 +9,8 @@ public class PlayerInteract_LMouseOnScreen_Script : MonoBehaviour
     [SerializeField] private GameObject SelectedObject;
     public BoomScript mBoom;
 
+    private double _timer = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,16 @@ public class PlayerInteract_LMouseOnScreen_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_timer > 0f && SelectedObject != null)
+        {
+            _timer = _timer - (1 * Time.deltaTime);
+            Debug.Log("Timer: " + _timer);
+        }
+        else if (_timer < 0f && SelectedObject != null)
+        {
+            ClearSelection();
+            _timer = 5f;
+        }
         // listen for LMB click (select GameObject)
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -26,6 +38,7 @@ public class PlayerInteract_LMouseOnScreen_Script : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse1))
         {
             ClearSelection();
+            _timer = 5f;
         }
     }
     /// <summary>
