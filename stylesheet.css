@@ -44,7 +44,7 @@ figure {
 
 footer {
     display: flex;
-    grid-area: 3/2/span 1/span2;
+    grid-area: 3/2/span 1/span 2;
     background-color: lightgreen;
     justify-content: center;
     align-content: center;
