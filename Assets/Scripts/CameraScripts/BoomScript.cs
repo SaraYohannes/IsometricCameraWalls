@@ -63,13 +63,18 @@ public class BoomScript : MonoBehaviour
             focusPos = transform.parent.Find("body").position;
         }
         
-        // continusly update MCs position
-        if (transform.parent != null)
-        {
-            MCpos = transform.parent.Find("body").position;
-            mbase = MCpos;
-        }
-        
+        // this variable is used by CameraMovement.cs
+        mbase = focusPos;
+
+        /*
+        * // continusly update MCs position
+        * if (transform.parent != null)
+        * {
+        *     MCpos = transform.parent.Find("body").position;
+        *     mbase = MCpos;
+        * }
+        */
+
         // continously update camera position
         if (this.transform != null)
         {
@@ -112,7 +117,7 @@ public class BoomScript : MonoBehaviour
     /// <returns></returns>
     public float BoomLength()
     {
-        return Vector3.Distance(MCpos, CAMpos);
+        return Vector3.Distance(focusPos, CAMpos);
     }
     /// <summary>
     /// DEPRECATED
@@ -125,7 +130,7 @@ public class BoomScript : MonoBehaviour
         float t = 0.5f;
 
         // Lerp from camera's current position to MC's position
-        return Vector3.Lerp(CAMpos, MCpos, t);
+        return Vector3.Lerp(CAMpos, focusPos, t);
     }
     /// <summary>
     /// when cam is outside allowed dist, this will find the correct vector for either min or max allowed dist
@@ -139,16 +144,16 @@ public class BoomScript : MonoBehaviour
         if (n == 0)
         {
             Debug.Log("triggered BoomScript.SetCamPos, too far away!");
-            goalPos.x = CAMpos.x + 0.1f * (MCpos.x - CAMpos.x);
-            goalPos.y = CAMpos.y + 0.1f * (MCpos.y - CAMpos.y);
-            goalPos.z = CAMpos.z + 0.1f * (MCpos.z - CAMpos.z);
+            goalPos.x = CAMpos.x + 0.1f * (focusPos.x - CAMpos.x);
+            goalPos.y = CAMpos.y + 0.1f * (focusPos.y - CAMpos.y);
+            goalPos.z = CAMpos.z + 0.1f * (focusPos.z - CAMpos.z);
         }
         else
         {   // unexpected behaviour
             Debug.Log("triggered BoomScript.SetCamPos, too close!");
-            goalPos.x = CAMpos.x + 0.1f * (MCpos.x + CAMpos.x);
-            goalPos.y = CAMpos.y + 0.1f * (MCpos.y + CAMpos.y);
-            goalPos.z = CAMpos.z + 0.1f * (MCpos.z + CAMpos.z);
+            goalPos.x = CAMpos.x + 0.1f * (focusPos.x + CAMpos.x);
+            goalPos.y = CAMpos.y + 0.1f * (focusPos.y + CAMpos.y);
+            goalPos.z = CAMpos.z + 0.1f * (focusPos.z + CAMpos.z);
             Debug.Log("New vector position for camera is: " + goalPos);
         }
         return goalPos;

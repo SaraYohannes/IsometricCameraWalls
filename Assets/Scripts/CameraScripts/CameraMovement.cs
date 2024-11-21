@@ -75,7 +75,7 @@ public class CameraMovement : MonoBehaviour
         }
 
         // find new vector C from A(MC pos) and B(CAM pos) and send to Boom        
-        mBoom.SetCamPosScroll(NewGoalPos(dist, MCpos, CAMpos));
+        mBoom.SetCamPosScroll(NewGoalPos(dist, mLookAt, CAMpos));
        
         /// wasn't necessary /// scrolling for UI elements video: https://www.youtube.com/watch?v=rAqyi85IAJ0
         /// wasn't necessary /// Unity documentation on wheel events: https://docs.unity3d.com/ScriptReference/UIElements.WheelEvent.html
