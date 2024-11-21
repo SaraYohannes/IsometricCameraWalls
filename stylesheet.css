@@ -23,6 +23,7 @@ header {
     justify-content: center;
     align-content: center;
     margin: 0px 2px 2px 2px;
+
 }
 
 section {
@@ -50,7 +51,7 @@ footer {
     background-color: lightgreen;
     justify-content: center;
     align-content: center;
-    margin: 2px, 2px, 0px, 2px;
+    margin: 2px;
 }
 
 #contactadd {
