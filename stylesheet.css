@@ -7,8 +7,8 @@
 body {
     display: grid;
     gap: 10px;
-    grid-template-rows: 19% 84% 4%;
-    grid-template-columns: 19% 49% 29%;
+    grid-template-rows: 20% 85% 5%;
+    grid-template-columns: 20% 50% 30%;
     height: 100vh;
     width: 100vw;
     background-color: whitesmoke;
