@@ -68,10 +68,17 @@ public class PlayerInteract_LMouseOnScreen_Script : MonoBehaviour
         else
         {
             GameObject selected = hit.collider.gameObject;
-            Debug.Log("The selected object was: " + selected.name);
-            SelectedObject = selected;
+            if (selected.tag != "Interactable")
+            {
+                Debug.Log("The selected object was: " + selected.tag);
+                selected = null;
+                return -1;
+            }
+            else
+            {
+                SelectedObject = selected;
+            }
         }
-
         return 0;
     }
     /// <summary>

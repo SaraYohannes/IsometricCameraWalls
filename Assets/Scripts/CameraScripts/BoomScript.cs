@@ -38,6 +38,8 @@ public class BoomScript : MonoBehaviour
     private Vector3 MCpos;
     // Camera position
     private Vector3 CAMpos;
+    // position Boom is focused on
+    private Vector3 focusPos;
     // distance between MC and CAM positions
     [SerializeField] private float currentDistance;
     [SerializeField] GameObject mCamera;
@@ -50,12 +52,25 @@ public class BoomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // decide what to focus on
+        if (mSelectedObj != null)
+        {
+            // Interactable GameObject player clicked
+            focusPos = mSelectedObj.transform.position;
+        }
+        else 
+        {
+            focusPos = transform.parent.Find("body").position;
+        }
+        
         // continusly update MCs position
         if (transform.parent != null)
         {
             MCpos = transform.parent.Find("body").position;
             mbase = MCpos;
         }
+        
+        // continously update camera position
         if (this.transform != null)
         {
             CAMpos = transform.position;
@@ -88,7 +103,7 @@ public class BoomScript : MonoBehaviour
         // the speed of the mouse moving in X axis
         float mouseX_value = Input.GetAxis("Mouse X");
         float mouseY_value = Input.GetAxis("Mouse Y");
-        RotateAroundPoint(mouseX_value, mouseY_value);
+        RotateAroundPoint(mouseX_value, mouseY_value, focusPos);
     }
 
     /// <summary>
@@ -157,7 +172,7 @@ public class BoomScript : MonoBehaviour
     /// </summary>
     /// <param name="xdir">Input from getAxis(Mouse X)</param>
     /// <param name="ydir">Input from getAxis(Mouse Y)</param>
-    void RotateAroundPoint(float xdir, float ydir)
+    void RotateAroundPoint(float xdir, float ydir, Vector3 pos)
     {
         float maxY = 60.0f;
         float minY = 30.0f;
@@ -174,9 +189,9 @@ public class BoomScript : MonoBehaviour
             yspeed = minY - yrotateCounter;
         }
 
-        transform.RotateAround(transform.parent.Find("body").position, new Vector3(0, 1, 0), xspeed);
+        transform.RotateAround(pos, new Vector3(0, 1, 0), xspeed);
 
-        transform.RotateAround(transform.parent.Find("body").position, new Vector3(1, 0, 0), yspeed);
+        transform.RotateAround(pos, new Vector3(1, 0, 0), yspeed);
 
         yrotateCounter += yspeed;
     }
