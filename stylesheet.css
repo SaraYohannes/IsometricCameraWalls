@@ -74,8 +74,9 @@ footer {
 #lang_but {
     grid-area:3/4/span 1/span 1;
     display: flex;
-    align-self: flex-end;
-    justify-self: right;
+    right: 20px;
+    /*align-self: flex-end;*/
+    justify-self: center;
     background-color: transparent;
 }
 
