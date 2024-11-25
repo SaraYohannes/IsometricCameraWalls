@@ -71,6 +71,6 @@ footer {
 
 #lang_but {
     background-color: transparent;
-    justify-self: flex-end;
     align-self: flex-end;
+    justify-self: right;
 }
