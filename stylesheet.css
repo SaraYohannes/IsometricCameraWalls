@@ -70,6 +70,7 @@ footer {
 }
 
 #lang_but {
+    display: flex;
     background-color: transparent;
     align-self: flex-end;
     justify-self: right;
