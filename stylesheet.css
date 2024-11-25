@@ -74,11 +74,15 @@ footer {
 #head_title {
     grid-area: 1/1/span 2/span 4;
     background-color: deeppink;
+    justify-content: center;
+    align-content: center;
 }
 
 #head_intro {
     grid-area: 3/2/span 1/span 2;
     background-color: hotpink;
+    justify-content: center;
+    align-content: center;
 }
 
 #lang_but {
