@@ -20,8 +20,8 @@ header {
     display: flex;
     grid-area: 1/1/span 1/span 3;
     background-color: lightpink;
-    justify-content: center;
-    align-content: center;
+/*    justify-content: center;
+    align-content: center;*/
     margin: 0px 2px 2px 2px;
 
 }
@@ -68,10 +68,15 @@ footer {
     grid-area: 2/3/span 1/span 1;
     background-color: lightgray;
 }
-
 #lang_but {
     display: flex;
-    background-color: transparent;
     align-self: flex-end;
     justify-self: right;
+    background-color: transparent;
+}
+#lang_no {
+    background-color: transparent;
+}
+#lang_en {
+    background-color: transparent;
 }
