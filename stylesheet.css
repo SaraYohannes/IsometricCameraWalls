@@ -73,16 +73,18 @@ footer {
 
 #head_title {
     grid-area: 1/1/span 2/span 4;
-    background-color: deeppink;
+    background-color: transparent;
     justify-self: center;
     align-content: center;
+    margin: 4px;
 }
 
 #head_intro {
     grid-area: 3/2/span 1/span 2;
-    background-color: hotpink;
+    background-color: transparent;
     justify-self: center;
     align-content: center;
+    margin: 2px;
 }
 
 #lang_but {
