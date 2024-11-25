@@ -73,7 +73,7 @@ footer {
 
 #lang_but {
     grid-area:3/4/span 1/span 1;
-    display: flex;
+ 
     align-content: flex-end;
     justify-self: center;
     background-color: transparent;
