@@ -71,6 +71,16 @@ footer {
     background-color: lightgray;
 }
 
+#head_title {
+    grid-area: 1/1/span 2/span 4;
+    background-color: deeppink;
+}
+
+#head_intro {
+    grid-area: 3/2/span 1/span 2;
+    background-color: hotpink;
+}
+
 #lang_but {
     grid-area:3/4/span 1/span 1; 
     align-content: flex-end;
