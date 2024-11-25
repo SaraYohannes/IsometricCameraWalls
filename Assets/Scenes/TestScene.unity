@@ -137,11 +137,11 @@ GameObject:
   - component: {fileID: 392657762}
   m_Layer: 0
   m_Name: NorthWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &392657761
 Transform:
   m_ObjectHideFlags: 0
@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 527305261}
   - component: {fileID: 527305264}
   - component: {fileID: 527305265}
+  - component: {fileID: 527305266}
   m_Layer: 0
   m_Name: charCamera
   m_TagString: Untagged
@@ -393,6 +394,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 0}
   mBoom: {fileID: 527305264}
+--- !u!114 &527305266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527305259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd6bf2c2ed19804692dca2159cc28a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &600127632
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +650,7 @@ GameObject:
   - component: {fileID: 803911474}
   m_Layer: 0
   m_Name: WestWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,11 +988,11 @@ GameObject:
   - component: {fileID: 1210597525}
   m_Layer: 0
   m_Name: EastWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1210597524
 Transform:
   m_ObjectHideFlags: 0
@@ -1080,7 +1093,7 @@ GameObject:
   - component: {fileID: 1217007161}
   m_Layer: 0
   m_Name: SouthWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
