@@ -113,10 +113,10 @@ footer {
 
 #blogpost_template {
     width: 100%;
-    height: 700px;
+    height: 500px;
+    direction: ltr;
     background-color: lightblue;
-    /*padding: t/r/b/l*/
-    margin: 2px 20px 2px 2px; /*extra space to avoid the scrollbar (10px)*/
+    margin: 2px 20px 0px 2px; /*extra space to avoid the scrollbar (10px)*/
 }
 
 /*ILLUSTRATION AND MODAL SECTION*/
