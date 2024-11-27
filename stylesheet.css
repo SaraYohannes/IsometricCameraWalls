@@ -105,7 +105,7 @@ footer {
     grid-area: 2/2/span 1/span 1;
     background-color: lightcoral;
     display: block; /*child elements unsqueezed*/
-    flex-direction: column;
+    /*flex-direction: column;*/
     overflow-x: hidden;
     direction: rtl; /*scrollbar on the left*/
     position: relative;
@@ -118,7 +118,7 @@ footer {
     direction: ltr;
     text-align: left;
     background-color: lightblue;
-    margin: 2px 20px 0px 50px; /*extra space to avoid the scrollbar (10px)*/
+    margin: 2px 2px 0px 50px; /*extra space to avoid the scrollbar (10px)*/
 }
 
 /*ILLUSTRATION AND MODAL SECTION*/
