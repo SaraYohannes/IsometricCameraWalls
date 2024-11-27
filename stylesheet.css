@@ -57,11 +57,11 @@ footer {
 #contactadd {
     grid-area: 2/1/span 2/span 1;
     background-color: lightblue;
+    margin: 2px;
+    display: grid;
 }
 
 #contactadd_grid {
-    margin: 2px;
-    display: grid;
     background-color: lightgoldenrodyellow;
 }
 
