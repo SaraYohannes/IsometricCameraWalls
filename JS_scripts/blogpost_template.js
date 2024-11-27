@@ -15,7 +15,7 @@ updates_en.forEach(update => {
     const blogupdate = document.createElement('article');
     blogupdate.classList.add('blogpost_title');
     
-    blogupdate.blogpost_title.innerHTML =
+    blogupdate.innerHTML =
         '<h4>${post.title}</h4>';
 
     container_element.appendChild(blogupdate);
