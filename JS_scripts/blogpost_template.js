@@ -5,8 +5,8 @@ const updates_no = [
 ];
 
 const updates_en = [
-    { postXX_en: 1, date: "DD.MMM YYYY", title: "TITLE OF UPDATE", content: "CONTENT" },
-    { postXX_en: 2, date: "DD.MMM YYYY", title: "TITLE OF UPDATE", content: "CONTENT" }
+    { postXX_en: 1, date: "DD.MMM YYYY", title: "TITLE OF UPDATE 1", content: "CONTENT" },
+    { postXX_en: 2, date: "DD.MMM YYYY", title: "TITLE OF UPDATE 2", content: "CONTENT" }
 ];
 
 const container_element = document.getElementById("blogpost_template");
