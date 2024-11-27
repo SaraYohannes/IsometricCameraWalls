@@ -22,8 +22,6 @@ header {
     display: grid;
     gap: 0px;
     background-color: lightpink;
-    /*    justify-content: center;
-    align-content: center;*/
     grid-template-rows: 33% 33% 33%;
     grid-template-columns: 25% 25% 25% 25%;
 }
@@ -59,6 +57,12 @@ footer {
 #contactadd {
     grid-area: 2/1/span 2/span 1;
     background-color: lightblue;
+}
+
+address.contactadd {
+    margin: 2px;
+    display: grid;
+    background-color: lightgoldenrodyellow;
 }
 
 #blogpost {
