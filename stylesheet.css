@@ -125,6 +125,7 @@ footer {
     padding: 1rem;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    color: black;
 }
 #blogpost_template {
     width: 100%;
