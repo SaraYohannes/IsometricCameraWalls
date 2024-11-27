@@ -13,7 +13,7 @@ const container_element = document.getElementById("blogpost_template");
 
 updates_en.forEach(updatepost => {
     const blogupdate = document.createElement('article');
-    blogupdate.classList.add('blogpost_title');
+    blogupdate.classList.add('blogpost_example');
     
     blogupdate.innerHTML =
         `
