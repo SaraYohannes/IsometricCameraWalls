@@ -104,10 +104,11 @@ footer {
 #blogpost {
     grid-area: 2/2/span 1/span 1;
     background-color: lightcoral;
-    display: flex;
+    display: block; /*child elements unsqueezed*/
     flex-direction: column;
     overflow-x: hidden;
     direction: rtl; /*scrollbar on the left*/
+    position: relative;
     overflow-y: scroll;
 }
 
