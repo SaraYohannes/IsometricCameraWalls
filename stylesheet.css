@@ -67,11 +67,13 @@ footer {
 #contactadd_aboutme {
     grid-area: 1/1/span 5/span 2; 
     background-color: lightgoldenrodyellow;
+    margin: 2px;
 }
 
 #contactadd_buttons {
     grid-area: 6/1/span 3/span 2;
     background-color: lightgoldenrodyellow;
+    margin: 2px;
 }
 
 #blogpost {
