@@ -131,6 +131,26 @@ footer {
     grid-template-rows: 5% 80% 15%;
 }
 
+.blogpost_date {
+    grid-area: 1/1/span 1/span 1;
+}
+
+.blogpost_title {
+    grid-area: 1/2/span 1/span 2;
+}
+
+.blogpost_summary {
+    grid-area: 2/1/span 2/span 1;
+}
+
+.blogpost_content {
+    grid-area: 2/2/span 2/span 1;
+}
+
+.blogpost_gallery {
+    grid-area: 2/3/span 2/span 1;
+}
+
 /*ILLUSTRATION AND MODAL SECTION*/
 #illmod {
     grid-area: 2/3/span 1/span 1;
