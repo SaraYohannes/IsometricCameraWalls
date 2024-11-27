@@ -59,9 +59,18 @@ footer {
     background-color: lightblue;
     margin: 2px;
     display: grid;
+    gap: 2px;
+    grid-template-columns: 50%;
+    grid-template-rows: 12%;
 }
 
-#contactadd_grid {
+#contactadd_aboutme {
+    grid-area: 1/1/span 5/span 2; 
+    background-color: lightgoldenrodyellow;
+}
+
+#contactadd_buttons {
+    grid-area: 6/1/span 3/span 2;
     background-color: lightgoldenrodyellow;
 }
 
