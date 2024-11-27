@@ -56,7 +56,10 @@ footer {
 
 #contactadd {
     grid-area: 2/1/span 2/span 1;
-    /*background-color: lightblue;*/
+    background-color: lightblue;
+}
+
+address.contactadd {
     margin: 2px;
     display: grid;
     background-color: lightgoldenrodyellow;
