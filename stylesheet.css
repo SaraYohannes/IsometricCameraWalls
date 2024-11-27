@@ -75,14 +75,18 @@ footer {
 
 #contactadd_title {
     grid-area: 1/1/span 1/span 1;
-    background-color: lightgray;
+    background-color: transparent;
     margin: 2px;
+    justify-self: center;
+    align-content: center;
 }
 
 #contactadd_aboutauthor {
     grid-area: 2/1/span 1/span 1;
-    background-color: lightgray;
+    background-color: transparent;
     margin: 2px;
+    justify-self: center;
+    align-content: center;
 }
 
 #contactadd_buttons {
