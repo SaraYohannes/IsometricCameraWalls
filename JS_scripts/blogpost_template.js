@@ -20,8 +20,8 @@ updates_en.forEach(update => {
     blogupdate.classList.add('blogpost_gallery');
 
     blogupdate.blogpost_title.innerHTML =
-        <h4>${post.title}</h4>;
+        '<h4>${post.title}</h4>';
     blogupdate.blogpost_content.innerHTML =
-        <p>${post.content}</p>;
+        '<p>${post.content}</p>';
 
 })
