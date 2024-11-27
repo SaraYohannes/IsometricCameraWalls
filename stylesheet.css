@@ -54,6 +54,7 @@ footer {
     margin: 2px;
 }
 
+/*CONTACT SECTION*/
 #contactadd {
     grid-area: 2/1/span 2/span 1;
     background-color: lightblue;
@@ -99,16 +100,28 @@ footer {
     padding: 2px;
 }
 
+/*BLOG SECTION*/
 #blogpost {
     grid-area: 2/2/span 1/span 1;
     background-color: lightcoral;
+    display: flex;
 }
 
+#blogpost_template {
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    padding: 5px 2px 5px 5px;
+}
+
+/*ILLUSTRATION AND MODAL SECTION*/
 #illmod {
     grid-area: 2/3/span 1/span 1;
     background-color: lightgray;
 }
 
+/*HEADER INTRO SECTION*/
 #head_title {
     grid-area: 1/1/span 2/span 4;
     background-color: transparent;
@@ -132,6 +145,8 @@ footer {
     justify-self: center;
     background-color: transparent;
 }
+
+/*BUTTONS*/
 
 #lang_no {
     background-color: transparent;
