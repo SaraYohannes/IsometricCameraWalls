@@ -96,6 +96,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    padding: 2px;
 }
 
 #blogpost {
@@ -142,20 +143,35 @@ footer {
 
 #tohomepage_but {
     grid-area: 1/1/span 1/span 2;
+    margin: 2px, 5px;
+    border: none;
+    background-color: transparent;
 }
 
 #togit_but {
     grid-area: 2/1/span 1/span 1;
+    margin: 2px;
+    border: none;
+    background-color: transparent;
 }
 
 #toitchio_but {
     grid-area: 2/2/span 1/span 1;
+    margin: 2px;
+    border: none;
+    background-color: transparent;
 }
 
 #tosketchfab_but {
     grid-area: 3/1/span 1/span 1;
+    margin: 2px;
+    border: none;
+    background-color: transparent;
 }
 
 #toartportfolio_but {
     grid-area: 3/2/span 1/span 1;
+    margin: 2px;
+    border: none;
+    background-color: transparent;
 }
