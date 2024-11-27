@@ -11,12 +11,12 @@ const updates_en = [
 
 const container_element = document.getElementById("blogpost_template");
 
-updates_en.forEach(update => {
+updates_en.forEach(updatepost => {
     const blogupdate = document.createElement('article');
     blogupdate.classList.add('blogpost_title');
     
     blogupdate.innerHTML =
-        '<h4>${updates_en.title}</h4>';
+        '<h4>${updatepost.title}</h4>';
 
     container_element.appendChild(blogupdate);
 })
