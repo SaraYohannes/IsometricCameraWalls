@@ -125,6 +125,10 @@ footer {
     height: 250px;
     background-color: lightblue;
     margin: 2px 2px 0px 3px; /*extra space to avoid the scrollbar (10px)*/
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 5% 80% 15%;
 }
 
 /*ILLUSTRATION AND MODAL SECTION*/
