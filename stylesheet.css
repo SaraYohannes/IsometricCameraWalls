@@ -93,6 +93,9 @@ footer {
     grid-area: 5/1/span 4/span 2;
     background-color: lightgoldenrodyellow;
     margin: 2px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 #blogpost {
@@ -135,4 +138,24 @@ footer {
 
 #lang_en {
     background-color: transparent;
+}
+
+#tohomepage_but {
+    grid-area: 1/1/span 1/span 2;
+}
+
+#togit_but {
+    grid-area: 2/1/span 1/span 1;
+}
+
+#toitchio_but {
+    grid-area: 2/2/span 1/span 1;
+}
+
+#tosketchfab_but {
+    grid-area: 3/1/span 1/span 1;
+}
+
+#toartportfolio_but {
+    grid-area: 3/2/span 1/span 1;
 }
