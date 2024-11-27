@@ -13,15 +13,10 @@ const container_element = document.getElementById("blogpost_template");
 
 updates_en.forEach(update => {
     const blogupdate = document.createElement('article');
-    blogupdate.classList.add('blogpost_date');
     blogupdate.classList.add('blogpost_title');
-    blogupdate.classList.add('blogpost_summary');
-    blogupdate.classList.add('blogpost_content');
-    blogupdate.classList.add('blogpost_gallery');
-
+    
     blogupdate.blogpost_title.innerHTML =
         '<h4>${post.title}</h4>';
-    blogupdate.blogpost_content.innerHTML =
-        '<p>${post.content}</p>';
 
+    container_element.appendChild(blogupdate);
 })
