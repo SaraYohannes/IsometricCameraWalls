@@ -68,6 +68,21 @@ footer {
     grid-area: 1/1/span 4/span 2; 
     background-color: lightgoldenrodyellow;
     margin: 2px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+}
+
+#contactadd_title {
+    grid-area: 1/1/span 1/span 1;
+    background-color: lightgray;
+    margin: 2px;
+}
+
+#contactadd_aboutauthor {
+    grid-area: 2/1/span 1/span 1;
+    background-color: lightgray;
+    margin: 2px;
 }
 
 #contactadd_buttons {
