@@ -16,7 +16,9 @@ updates_en.forEach(updatepost => {
     blogupdate.classList.add('blogpost_title');
     
     blogupdate.innerHTML =
-        '<h4>${updatepost.title}</h4>';
+        `
+        <h4>${updatepost.title}</h4>
+    `;
 
     container_element.appendChild(blogupdate);
 })
