@@ -15,16 +15,15 @@ updates_en.forEach(updatepost => {
     const blogupdate = document.createElement('article'); // I want to add a section with a grid, then I want to add 
     blogupdate.classList.add('blogpost_grid');        // items to those grids
 
-    /*child elements*/
+    /*child element - date*/
     const date_container = document.createElement('div');
     date_container.classList.add('blogpost_date');
 
-    updatepost.date.forEach(date => {
-        const date_el = document.createElement('p');
-        date_el.innerHTML = date.date;
-        date_container.appendChild(date_el);
-    });
+    const date_el = document.createElement('p');
+    date_el.innerHTML = updatepost.date;
+    date_container.appendChild(date_el);
 
+    /*child element - title*/
     const title_container = document.createElement('div');
     title_container.classList.add('blogpost_title');
 
@@ -33,7 +32,7 @@ updates_en.forEach(updatepost => {
         title_el.innerHTML = title.title;
         title_container.appendChild(title_el);
     });
-
+    /*child element - summary*/
     const summary_container = document.createElement('div');
     summary_container.classList.add('blogpost_summary');
 
@@ -42,7 +41,7 @@ updates_en.forEach(updatepost => {
         summary_el.innerHTML = summary.summary;
         summary_container.appendChild(summary_el);
     });
-
+    /*child element - content*/
     const content_container = document.createElement('div');
     content_container.classList.add('blogpost_content');
 
@@ -51,7 +50,7 @@ updates_en.forEach(updatepost => {
         content_el.innerHTML = content.content;
         content_container.appendChild(content_el);
     });
-
+    /*child element - gallery*/
     const gallery_container = document.createElement('div');
     gallery_container.classList.add('blogpost_gallery');
 
