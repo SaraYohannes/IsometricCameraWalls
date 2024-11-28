@@ -12,8 +12,8 @@ const updates_en = [
 const container_element = document.getElementById("blogpost_template");
 
 updates_en.forEach(updatepost => {
-    const blogupdate = document.createElement('article');
-    blogupdate.classList.add('blogpost_template');
+    const blogupdate = document.createElement('article'); // I want to add a section with a grid, then I want to add 
+    blogupdate.classList.add('blogpost_template');        // items to those grids
     
     blogupdate.innerHTML =
         `
