@@ -19,43 +19,55 @@ updates_en.forEach(updatepost => {
     const date_container = document.createElement('div');
     date_container.classList.add('blogpost_date');
 
-    blogupdate.date.forEach(date => {
+    updatepost.date.forEach(date => {
         const date_el = document.createElement('p');
-        date_el.innerHTML = blogupdate.date;
+        date_el.innerHTML = date.date;
+        date_container.appendChild(date_el);
     })
 
     const title_container = document.createElement('div');
     title_container.classList.add('blogpost_title');
 
-    blogupdate.title.forEach(title => {
+    updatepost.title.forEach(title => {
         const title_el = document.createElement('h4');
-        title_el.innerHTML = blogupdate.title;
+        title_el.innerHTML = title.title;
+        title_container.appendChild(title_el);
     })
 
     const summary_container = document.createElement('div');
     summary_container.classList.add('blogpost_summary');
 
-    blogupdate.summary.forEach(summary => {
+    updatepost.summary.forEach(summary => {
         const summary_el = document.createElement('p');
-        summary_el.innerHTML = blogupdate.summary;
+        summary_el.innerHTML = summary.summary;
+        summary_container.appendChild(summary_el);
     })
 
     const content_container = document.createElement('div');
     content_container.classList.add('blogpost_content');
 
-    blogupdate.content.forEach(content => {
+    updatepost.content.forEach(content => {
         const content_el = document.createElement('p');
-        content_el.innerHTML = blogupdate.content;
+        content_el.innerHTML = content.content;
+        content_container.appendChild(content_el);
     })
 
     const gallery_container = document.createElement('div');
     gallery_container.classList.add('blogpost_gallery');
 
-    blogupdate.gallery.forEach(gallery => {
+    updatepost.gallery.forEach(gallery => {
         const gallery_el = document.createElement('p');
-        gallery_el.innerHTML = blogupdate.gallery;
+        gallery_el.innerHTML = gallery.gallery;
+        gallery_container.appendChild(gallery_el);
     })
 
+    /*append child elements to blogpost*/
+    blogupdate.appendChild(date_container);
+    blogupdate.appendChild(title_container);
+    blogupdate.appendChild(summary_container);
+    blogupdate.appendChild(container_element);
+    blogupdate.appendChild(gallery_container);
 
+    /*append blogpost to wrapper*/
     container_element.appendChild(blogupdate);
 })
