@@ -7,6 +7,7 @@ const updates_no = [
 const updates_en = [
     { postXX_en: 1, date: "01 jan 2024", title: "TITLE OF UPDATE 1", summary: "SUMMARY!", content: "CONTENT", gallery: "GALLERY" },
     { postXX_en: 2, date: "01 feb 2024", title: "TITLE OF UPDATE 2", summary: "SUMMARY!", content: "CONTENT", gallery: "GALLERY" }
+    { postXX_en: 3, date: "05 mar 2024", title: "TITLE OF UPDATE 3", summary: "A short summary of what's in the content so you can make an informed decision if you want to read this or not!", content: "A long string of content. You need to know all of these things to be able to follow along on my project development! And there are tonnes of links to external sources and references. I will also add pictures so it will be easier to follow along and you can understand and visualise what I want to achieve", gallery: "GALLERY with picutres and descriptions." }
 ];
 
 const container_element = document.getElementById("blogpost_wrapper");
