@@ -13,9 +13,9 @@ const updates_en = [
 const container_element = document.getElementById("blogpost_wrapper");
 
 updates_en.forEach(updatepost => {
-    const blogupdate = document.createElement('article'); // I want to add a section with a grid, then I want to add 
-    blogupdate.classList.add('blogpost_grid');        // items to those grids
-
+    const blogupdate = document.createElement('article'); 
+    blogupdate.classList.add('blogpost_grid');    
+    
     /*child element - date*/
     const date_container = document.createElement('div');
     date_container.classList.add('blogpost_date');
