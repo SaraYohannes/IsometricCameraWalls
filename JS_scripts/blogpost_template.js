@@ -27,39 +27,34 @@ updates_en.forEach(updatepost => {
     const title_container = document.createElement('div');
     title_container.classList.add('blogpost_title');
 
-    updatepost.title.forEach(title => {
-        const title_el = document.createElement('h4');
-        title_el.innerHTML = title.title;
-        title_container.appendChild(title_el);
-    });
+    const title_el = document.createElement('h4');
+    title_el.innerHTML = updatepost.title;
+    title_container.appendChild(title_el);
+
     /*child element - summary*/
     const summary_container = document.createElement('div');
     summary_container.classList.add('blogpost_summary');
 
-    updatepost.summary.forEach(summary => {
-        const summary_el = document.createElement('p');
-        summary_el.innerHTML = summary.summary;
-        summary_container.appendChild(summary_el);
-    });
+    const summary_el = document.createElement('p');
+    summary_el.innerHTML = updatepost.summary;
+    summary_container.appendChild(summary_el);
+
     /*child element - content*/
     const content_container = document.createElement('div');
     content_container.classList.add('blogpost_content');
 
-    updatepost.content.forEach(content => {
-        const content_el = document.createElement('p');
-        content_el.innerHTML = content.content;
-        content_container.appendChild(content_el);
-    });
+    const content_el = document.createElement('p');
+    content_el.innerHTML = updatepost.content;
+    content_container.appendChild(content_el);
+
     /*child element - gallery*/
     const gallery_container = document.createElement('div');
     gallery_container.classList.add('blogpost_gallery');
 
-    updatepost.gallery.forEach(gallery => {
-        const gallery_el = document.createElement('p');
-        gallery_el.innerHTML = gallery.gallery;
-        gallery_container.appendChild(gallery_el);
-    });
-
+    const gallery_el = document.createElement('p');
+    gallery_el.innerHTML = updatepost.gallery;
+    gallery_container.appendChild(gallery_el);
+    
     /*append child elements to blogpost*/
     blogupdate.appendChild(date_container);
     blogupdate.appendChild(title_container);
