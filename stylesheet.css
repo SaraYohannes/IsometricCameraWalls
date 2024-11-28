@@ -120,7 +120,7 @@ footer {
     direction: ltr;
 }
 
-#blogpost_grid {
+.blogpost_grid { /*this is used to make the blogpost posts*/
     width: 100%;
     height: auto;
     background-color: lightblue;
@@ -131,23 +131,23 @@ footer {
     grid-template-rows: 5% 80% 15%;
 }
 
-.blogpost_date {
+.blogpost_date { /*date*/
     grid-area: 1/1/span 1/span 1;
 }
 
-.blogpost_title {
+.blogpost_title { /*title*/
     grid-area: 1/2/span 1/span 2;
 }
 
-.blogpost_summary {
+.blogpost_summary { /*summary*/
     grid-area: 2/1/span 2/span 1;
 }
 
-.blogpost_content {
+.blogpost_content { /*content*/
     grid-area: 2/2/span 2/span 1;
 }
 
-.blogpost_gallery {
+.blogpost_gallery { /*gallery*/
     grid-area: 2/3/span 2/span 1;
 }
 
