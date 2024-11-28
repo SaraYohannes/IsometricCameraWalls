@@ -59,7 +59,7 @@ updates_en.forEach(updatepost => {
     blogupdate.appendChild(date_container);
     blogupdate.appendChild(title_container);
     blogupdate.appendChild(summary_container);
-    blogupdate.appendChild(container_element);
+    blogupdate.appendChild(content_container);
     blogupdate.appendChild(gallery_container);
 
     /*append blogpost to wrapper*/
