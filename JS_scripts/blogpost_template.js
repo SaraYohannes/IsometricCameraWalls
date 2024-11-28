@@ -23,7 +23,7 @@ updates_en.forEach(updatepost => {
         const date_el = document.createElement('p');
         date_el.innerHTML = date.date;
         date_container.appendChild(date_el);
-    })
+    });
 
     const title_container = document.createElement('div');
     title_container.classList.add('blogpost_title');
@@ -32,7 +32,7 @@ updates_en.forEach(updatepost => {
         const title_el = document.createElement('h4');
         title_el.innerHTML = title.title;
         title_container.appendChild(title_el);
-    })
+    });
 
     const summary_container = document.createElement('div');
     summary_container.classList.add('blogpost_summary');
@@ -41,7 +41,7 @@ updates_en.forEach(updatepost => {
         const summary_el = document.createElement('p');
         summary_el.innerHTML = summary.summary;
         summary_container.appendChild(summary_el);
-    })
+    });
 
     const content_container = document.createElement('div');
     content_container.classList.add('blogpost_content');
@@ -50,7 +50,7 @@ updates_en.forEach(updatepost => {
         const content_el = document.createElement('p');
         content_el.innerHTML = content.content;
         content_container.appendChild(content_el);
-    })
+    });
 
     const gallery_container = document.createElement('div');
     gallery_container.classList.add('blogpost_gallery');
@@ -59,7 +59,7 @@ updates_en.forEach(updatepost => {
         const gallery_el = document.createElement('p');
         gallery_el.innerHTML = gallery.gallery;
         gallery_container.appendChild(gallery_el);
-    })
+    });
 
     /*append child elements to blogpost*/
     blogupdate.appendChild(date_container);
