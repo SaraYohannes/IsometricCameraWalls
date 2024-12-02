@@ -66,3 +66,69 @@ updates_en.forEach(updatepost => {
     /*append blogpost to wrapper*/
     container_element.appendChild(blogupdate);
 })
+
+function lang_change(current_lang) {
+    if (current_lang == 'lang_no') {
+        update_page('updates_no');
+    }
+    else if (current_lang == 'lang_en') {
+        update_page('updates_en');
+    }
+}
+
+function update_page(current_lang) {
+    current_lang.forEach(updatepost => {
+        const blogupdate = document.createElement('article');
+        blogupdate.classList.add('blogpost_grid');
+
+        /*child element - date*/
+        const date_container = document.createElement('div');
+        date_container.classList.add('blogpost_date');
+
+        const date_el = document.createElement('p');
+        date_el.innerHTML = updatepost.date;
+        date_container.appendChild(date_el);
+
+        /*child element - title*/
+        const title_container = document.createElement('div');
+        title_container.classList.add('blogpost_title');
+
+        const title_el = document.createElement('h4');
+        title_el.innerHTML = updatepost.title;
+        title_container.appendChild(title_el);
+
+        /*child element - summary*/
+        const summary_container = document.createElement('div');
+        summary_container.classList.add('blogpost_summary');
+
+        const summary_el = document.createElement('p');
+        summary_el.innerHTML = updatepost.summary;
+        summary_container.appendChild(summary_el);
+
+        /*child element - content*/
+        const content_container = document.createElement('div');
+        content_container.classList.add('blogpost_content');
+
+        const content_el = document.createElement('p');
+        content_el.innerHTML = updatepost.content;
+        content_container.appendChild(content_el);
+
+        /*child element - gallery*/
+        const gallery_container = document.createElement('div');
+        gallery_container.classList.add('blogpost_gallery');
+
+        const gallery_el = document.createElement('p');
+        gallery_el.innerHTML = updatepost.gallery;
+        gallery_container.appendChild(gallery_el);
+
+        /*append child elements to blogpost*/
+        blogupdate.appendChild(date_container);
+        blogupdate.appendChild(title_container);
+        blogupdate.appendChild(summary_container);
+        blogupdate.appendChild(content_container);
+        blogupdate.appendChild(gallery_container);
+
+        /*append blogpost to wrapper*/
+        container_element.appendChild(blogupdate);
+    })
+}
