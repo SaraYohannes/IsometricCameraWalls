@@ -69,10 +69,10 @@ updates_en.forEach(updatepost => {
 
 function lang_change(current_lang) {
     if (current_lang == 'lang_no') {
-        update_page('updates_no');
+        update_page(updates_no);
     }
     else if (current_lang == 'lang_en') {
-        update_page('updates_en');
+        update_page(updates_en);
     }
 }
 
