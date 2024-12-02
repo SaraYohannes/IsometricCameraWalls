@@ -77,7 +77,8 @@ function lang_change(current_lang) {
 }
 
 function update_page(current_lang) {
-    current_lang.forEach(updatepost => {
+    const postlang = current_lang;
+    postlang.forEach(updatepost => {
         const blogupdate = document.createElement('article');
         blogupdate.classList.add('blogpost_grid');
 
