@@ -12,6 +12,8 @@ const updates_en = [
 
 const container_element = document.getElementById("blogpost_wrapper");
 
+// when page is opened this will be run first so that the blogpost area will be 
+// populated with posts at once
 updates_en.forEach(updatepost => {
     const blogupdate = document.createElement('article'); 
     blogupdate.classList.add('blogpost_grid');    
@@ -68,7 +70,7 @@ updates_en.forEach(updatepost => {
 })
 
 function lang_change(current_lang) {
-    // remove children first!
+    // remove children as to not get appended posts
     container_element.innerHTML = '';
 
     if (current_lang == 'lang_no') {
@@ -80,8 +82,7 @@ function lang_change(current_lang) {
 }
 
 function update_page(current_lang) {
-    const postlang = current_lang;
-    postlang.forEach(updatepost => {
+    current_lang.forEach(updatepost => {
         const blogupdate = document.createElement('article');
         blogupdate.classList.add('blogpost_grid');
 
