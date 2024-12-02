@@ -68,6 +68,9 @@ updates_en.forEach(updatepost => {
 })
 
 function lang_change(current_lang) {
+    // remove children first!
+    container_element.innerHTML = '';
+
     if (current_lang == 'lang_no') {
         update_page(updates_no);
     }
