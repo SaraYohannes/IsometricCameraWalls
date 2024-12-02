@@ -73,7 +73,7 @@ public class CameraRaycast : MonoBehaviour
             {
                 for (int i = 0; i < hitWalls.Count; i++)
                 {
-                    hitWalls[i].GetComponent<MeshRenderer>().material = "Assets/Materials/material_guide-for-testing_red.mat";
+                    //hitWalls[i].GetComponent<MeshRenderer>().material = "Assets/Materials/material_guide-for-testing_red.mat";
                 }
             }
             else
