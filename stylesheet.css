@@ -172,12 +172,14 @@ footer {
 }
 
 .small_gallery_picture {
+    grid-area: 1/1/span 1/span 1;
     width: 100%;
     height: auto;
     min-height: 20px;
 }
 
 .small_gallery_text {
+    grid-area: 2/1/span 1/span 1;
     /*centered*/
     /*color black?*/
     min-height: 20px;
