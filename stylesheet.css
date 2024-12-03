@@ -174,11 +174,13 @@ footer {
 .small_gallery_picture {
     width: 100%;
     height: auto;
+    min-height: 20px;
 }
 
 .small_gallery_text {
     /*centered*/
     /*color black?*/
+    min-height: 20px;
 }
 
 /*HEADER INTRO SECTION*/
