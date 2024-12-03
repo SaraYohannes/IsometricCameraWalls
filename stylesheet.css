@@ -175,7 +175,7 @@ footer {
     grid-area: 1/1/span 1/span 1;
     width: 100%;
     height: auto;
-    min-height: 80px;
+    min-height: 80%;
 }
 
 .small_gallery_text {
@@ -185,7 +185,7 @@ footer {
     /*color black?*/
     width: auto;
     height: auto;
-    min-height: 20px;
+    min-height: 20%;
 }
 
 /*HEADER INTRO SECTION*/
