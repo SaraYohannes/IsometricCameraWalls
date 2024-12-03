@@ -180,6 +180,7 @@ footer {
 
 .small_gallery_text {
     grid-area: 2/1/span 1/span 1;
+    display: flex;
     /*centered*/
     /*color black?*/
     width: auto;
