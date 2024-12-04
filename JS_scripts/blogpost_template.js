@@ -65,6 +65,8 @@ updates_en.forEach(updatepost => {
     gallery_el.src = updatepost.src;
     gallery_el.alt = updatepost.alt;
     gallery_el.title = updatepost.title;
+    gallery_el.style.width = updatepost.width;
+    gallery_el.style.height = updatepost.height;
     gallery_container.appendChild(gallery_el);
     
     /*append child elements to blogpost*/
