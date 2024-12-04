@@ -171,11 +171,15 @@ footer {
     grid-template-columns: 100%;
 }
 
-.img {
+.figureimg {
     grid-area: 1/1/span 1/span 1;
     width: 100%;
     height: auto;
     min-height: 70px;
+}
+
+.img {
+
 }
 
 .small_gallery_text{

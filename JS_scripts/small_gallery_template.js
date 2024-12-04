@@ -15,15 +15,16 @@ complete_gallery.forEach(pic => {
 
     /*child element - picture*/
     const pic_cont = document.createElement('figure');
-    pic_cont.classList.add('img');
-    /*const img = document.createElement('img');*/
-    pic_cont.src = pic.src;
-    pic_cont.alt = pic.alt;
-    pic_cont.title = pic.title;
-    pic_cont.style.width = pic.width;
-    pic_cont.style.height = pic.height;
+    pic_cont.classList.add('figureimg');
 
-    /*pic_cont.appendChild(img);*/
+    const img = document.createElement('img');
+    img.src = pic.src;
+    img.alt = pic.alt;
+    img.title = pic.title;
+    img.style.width = pic.width;
+    img.style.height = pic.height;
+
+    pic_cont.appendChild(img);
 
     /*child element - p*/
     const pic_dec = document.createElement('figcaption');
