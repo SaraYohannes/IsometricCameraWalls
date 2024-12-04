@@ -113,7 +113,6 @@ footer {
 
 #blogpost_wrapper {
     display: block;
-    /*flex-direction: column;*/
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -150,6 +149,9 @@ footer {
 
 .blogpost_gallery { /*gallery*/
     grid-area: 2/3/span 2/span 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /*ILLUSTRATION AND MODAL SECTION*/

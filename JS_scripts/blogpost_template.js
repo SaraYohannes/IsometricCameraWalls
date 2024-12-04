@@ -1,22 +1,36 @@
-
-const updates_no = [
+const post_img_no = [
     { nr: 1, date: "1st of Jan, 2024", post: 1, src: 'img_src/dinnerflower.JPG', title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
     { nr: 2, date: "1st of Jan, 2024", post: 1, src: 'img_src/rivercrossing.JPG', title: 'et sted å krysse elven', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
     { nr: 3, date: "1st of Jan, 2024", post: 2, src: 'img_src/mountainbush.JPG', title: 'busker som skygger for stien', alt: 'mountain bushes', ptext: 'there is a path here, but it is not visible', width: "100%", height: "100%" },
     { nr: 4, date: "1st of Jan, 2024", post: 3, src: 'img_src/lakeislet.JPG', title: 'en liten øy i en innsjø', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
     { nr: 5, date: "1st of Jan, 2024", post: 3, src: 'img_src/redberry.JPG', title: 'et umodent bær', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
-    { nr: 6, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'et platå', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
+    { nr: 5, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'et platå', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
 ];
 
-const updates_en = [
+const post_img_en = [
     { nr: 1, date: "1st of Jan, 2024", post: 1, src: 'img_src/dinnerflower.JPG', title: 'a vase of wildflowers on a dining table', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
     { nr: 2, date: "1st of Jan, 2024", post: 1, src: 'img_src/rivercrossing.JPG', title: 'a place to cross the river', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
     { nr: 3, date: "1st of Jan, 2024", post: 2, src: 'img_src/mountainbush.JPG', title: 'bushes obscouring mountain path', alt: 'mountain bushes', ptext: 'there is a path here, but it is not visible', width: "100%", height: "100%" },
     { nr: 4, date: "1st of Jan, 2024", post: 3, src: 'img_src/lakeislet.JPG', title: 'an islet on a lake', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
     { nr: 5, date: "1st of Jan, 2024", post: 3, src: 'img_src/redberry.JPG', title: 'an unripe berry', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
-    { nr: 6, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'a platau', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
+    { nr: 5, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'a platau', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
 ];
 
+
+const updates_no = [
+    { nr: 1, date: "1st of Jan, 2024", post: 1, title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', summary: 'a vase of wildflowers. Wine in the background. Table is set for dinner' },
+    { nr: 2, date: "1st of Jan, 2024", post: 2, title: 'busker som skygger for stien', alt: 'mountain bushes', summary: 'there is a path here, but it is not visible' },
+    { nr: 3, date: "1st of Jan, 2024", post: 3, title: 'en liten øy i en innsjø', alt: 'lake islet', summary: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet' },
+    { nr: 4, date: "1st of Jan, 2024", post: 4, title: 'et platå', alt: 'a platau', summary: 'it is not a platau, but in this angle, it looks like it' }
+];
+
+const updates_en = [
+    { nr: 1, date: "1st of Jan, 2024", post: 1, title: 'a vase of wildflowers on a dining table', alt: 'dinner flower', summary: 'a vase of wildflowers. Wine in the background. Table is set for dinner' },
+    { nr: 2, date: "1st of Jan, 2024", post: 2, title: 'bushes obscouring mountain path', alt: 'mountain bushes', summary: 'there is a path here, but it is not visible' },
+    { nr: 3, date: "1st of Jan, 2024", post: 3, title: 'an islet on a lake', alt: 'lake islet', summary: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet' },
+    { nr: 4, date: "1st of Jan, 2024", post: 4, title: 'a platau', alt: 'a platau', summary: 'it is not a platau, but in this angle, it looks like it' }
+];
+  
 const container_element = document.getElementById("blogpost_wrapper");
 
 // when page is opened this will be run first so that the blogpost area will be 
