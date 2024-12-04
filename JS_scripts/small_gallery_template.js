@@ -13,7 +13,7 @@ complete_gallery.forEach(pic => {
 
     /*child element - picture*/
     const pic_cont = document.createElement('figure');
-    pic_cont.classList.add('small_gallery');
+    pic_cont.classList.add('img');
     pic_cont.innerHTML = pic.alt;
 
     /*child element - p*/
