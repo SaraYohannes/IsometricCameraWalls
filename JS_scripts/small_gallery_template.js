@@ -13,8 +13,13 @@ complete_gallery.forEach(pic => {
 
     /*child element - picture*/
     const pic_cont = document.createElement('figure');
-    pic_cont.classList.add('img');
-    pic_cont.innerHTML = pic.alt;
+
+    const img = document.createElement('img');
+    img.src = pic.src;
+    img.alt = pic.alt;
+    img.title = pic.title;
+
+    pic_cont.appendChild(img);
 
     /*child element - p*/
     const pic_dec = document.createElement('figcaption');
