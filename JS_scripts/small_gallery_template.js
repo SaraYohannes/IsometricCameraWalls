@@ -13,12 +13,12 @@ complete_gallery.forEach(pic => {
 
     /*child element - picture*/
     const pic_cont = document.createElement('figure');
-    pic_cont.classList.add('small_gallery');
+    pic_cont.classList.add('figure small_gallery');
     pic_cont.innerHTML = pic.alt;
 
     /*child element - p*/
     const pic_dec = document.createElement('figcaption');
-    pic_dec.classList.add('small_gallery_text')
+    pic_dec.classList.add('figcaption small_gallery_text')
     pic_dec.innerHTML = pic.ptext;
 
     /*append child elements to illbox*/
