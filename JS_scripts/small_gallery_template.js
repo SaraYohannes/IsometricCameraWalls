@@ -12,12 +12,12 @@ complete_gallery.forEach(pic => {
     addPic.classList.add('illbox');
 
     /*child element - picture*/
-    const pic_cont = document.createElement('picture');
-    pic_cont.classList.add('small_gallery_picture');
+    const pic_cont = document.createElement('figure');
+    pic_cont.classList.add('small_gallery');
     pic_cont.innerHTML = pic.alt;
 
     /*child element - p*/
-    const pic_dec = document.createElement('p');
+    const pic_dec = document.createElement('figcaption');
     pic_dec.classList.add('small_gallery_text')
     pic_dec.innerHTML = pic.ptext;
 

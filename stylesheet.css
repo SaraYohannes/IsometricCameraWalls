@@ -171,21 +171,20 @@ footer {
     grid-template-columns: 100%;
 }
 
-.small_gallery_picture {
+.figure small_gallery{
     grid-area: 1/1/span 1/span 1;
     width: 100%;
     height: auto;
     min-height: 70px;
 }
 
-.small_gallery_text {
+.figcaption small_gallery_text{
     grid-area: 2/1/span 1/span 1;
     display: flex;
-    /*centered*/
-    /*color black?*/
     width: auto;
     height: auto;
     min-height: 30px;
+    text-align: center;
 }
 
 /*HEADER INTRO SECTION*/
