@@ -112,10 +112,11 @@ footer {
 }
 
 #blogpost_wrapper {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /*flex-direction: column;*/
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     height: auto;
     direction: ltr;
 }
