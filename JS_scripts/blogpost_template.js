@@ -56,7 +56,7 @@ const container_element = document.getElementById("blogpost_wrapper");
 
 // when page is opened this will be run first so that the blogpost area will be
 // populated with posts at once
-currentlang.forEach(post => {
+postupdate_en.forEach(post => {
     //create article, apply grid-area for structure
     const posttemplate = document.createElement('article');
     posttemplate.classList.add('blogpost_grid');
