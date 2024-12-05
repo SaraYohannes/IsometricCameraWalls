@@ -213,14 +213,19 @@ function update_posts(currentlang) {
 
         //add gallery
         //child element - gallery space
-        const smallgallery = document.createElement('div');
-        smallgallery.classList.add('illbox');
+        //create box for gallery
+        const galleryaside = document.createElement('section');
 
         postimg_en.forEach(image => {
             if (post.postnr !== image.postnr) { return; }
             else {
+                const smallgallery = document.createElement('div');
+                smallgallery.classList.add('illbox');
+
                 const pic = document.createElement('figure');
                 pic.classList.add('figureimg');
+
+                smallgallery.appendChild(pic);
 
                 const img = document.createElement('img');
                 img.src = image.src;
@@ -234,9 +239,11 @@ function update_posts(currentlang) {
                 const description = document.createElement('figcaption');
                 description.classList.add('small_gallery_text');
                 description.innerHTML = image.ptext;
-
-                smallgallery.appendChild(pic);
+                
                 smallgallery.appendChild(description);
+
+                //append smallgallery to box for gallery
+                galleryaside.appendChild(smallgallery);
             }
         })
 
@@ -245,7 +252,7 @@ function update_posts(currentlang) {
         posttemplate.appendChild(posttitle);
         posttemplate.appendChild(postsummary);
         posttemplate.appendChild(content);
-        posttemplate.appendChild(smallgallery);
+        posttemplate.appendChild(galleryaside);
         
         //append whole post to wrapper
         container_element.appendChild(posttemplate);
