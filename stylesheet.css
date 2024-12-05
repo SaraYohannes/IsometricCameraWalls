@@ -104,8 +104,7 @@ footer {
 #blogpost {
     grid-area: 2/2/span 1/span 1;
     background-color: lightcoral;
-    display: block; /*child elements unsqueezed*/
-    
+    display: block; /*child elements unsqueezed*/    
     overflow-x: hidden;
     direction: rtl; /*scrollbar on the left*/
     position: relative;
@@ -124,6 +123,7 @@ footer {
 .blogpost_grid { /*this is used to make the blogpost posts*/
     width: 100%;
     height: auto;
+    max-height: 400px;
     background-color: lightblue;
     margin: 2px 2px 0px 3px;
     display: grid;
