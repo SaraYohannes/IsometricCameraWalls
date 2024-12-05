@@ -105,6 +105,7 @@ footer {
     grid-area: 2/2/span 1/span 1;
     background-color: lightcoral;
     display: block; /*child elements unsqueezed*/
+    max-height: 500px;
     overflow-x: hidden;
     direction: rtl; /*scrollbar on the left*/
     position: relative;
@@ -116,8 +117,7 @@ footer {
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    /*height: auto;*/
-    max-height: 500px;
+    height: auto;
     direction: ltr;
 }
 
