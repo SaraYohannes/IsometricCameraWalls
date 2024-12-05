@@ -215,6 +215,7 @@ function update_posts(currentlang) {
         //child element - gallery space
         //create box for gallery
         const galleryaside = document.createElement('section');
+        galleryaside.classList.add('blogpost_gallery')
 
         postimg_en.forEach(image => {
             if (post.postnr !== image.postnr) { return; }
