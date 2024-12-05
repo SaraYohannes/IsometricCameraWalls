@@ -1,35 +1,3 @@
-const post_img_no = [
-    { nr: 1, date: "1st of Jan, 2024", post: 1, src: 'img_src/dinnerflower.JPG', title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
-    { nr: 2, date: "1st of Jan, 2024", post: 1, src: 'img_src/rivercrossing.JPG', title: 'et sted å krysse elven', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
-    { nr: 3, date: "1st of Jan, 2024", post: 2, src: 'img_src/mountainbush.JPG', title: 'busker som skygger for stien', alt: 'mountain bushes', ptext: 'there is a path here, but it is not visible', width: "100%", height: "100%" },
-    { nr: 4, date: "1st of Jan, 2024", post: 3, src: 'img_src/lakeislet.JPG', title: 'en liten øy i en innsjø', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
-    { nr: 5, date: "1st of Jan, 2024", post: 3, src: 'img_src/redberry.JPG', title: 'et umodent bær', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
-    { nr: 5, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'et platå', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
-];
-
-const post_img_en = [
-    { nr: 1, date: "1st of Jan, 2024", post: 1, src: 'img_src/dinnerflower.JPG', title: 'a vase of wildflowers on a dining table', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
-    { nr: 2, date: "1st of Jan, 2024", post: 1, src: 'img_src/rivercrossing.JPG', title: 'a place to cross the river', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
-    { nr: 3, date: "1st of Jan, 2024", post: 2, src: 'img_src/mountainbush.JPG', title: 'bushes obscouring mountain path', alt: 'mountain bushes', ptext: 'there is a path here, but it is not visible', width: "100%", height: "100%" },
-    { nr: 4, date: "1st of Jan, 2024", post: 3, src: 'img_src/lakeislet.JPG', title: 'an islet on a lake', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
-    { nr: 5, date: "1st of Jan, 2024", post: 3, src: 'img_src/redberry.JPG', title: 'an unripe berry', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
-    { nr: 5, date: "1st of Jan, 2024", post: 4, src: 'img_src/plataugrassy.JPG', title: 'a platau', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
-];
-
-const updates_no = [
-    { nr: 1, date: "1st of Jan, 2024", post: 1, title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', summary: 'a vase of wildflowers. Wine in the background. Table is set for dinner' },
-    { nr: 2, date: "1st of Jan, 2024", post: 2, title: 'busker som skygger for stien', alt: 'mountain bushes', summary: 'there is a path here, but it is not visible' },
-    { nr: 3, date: "1st of Jan, 2024", post: 3, title: 'en liten øy i en innsjø', alt: 'lake islet', summary: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet' },
-    { nr: 4, date: "1st of Jan, 2024", post: 4, title: 'et platå', alt: 'a platau', summary: 'it is not a platau, but in this angle, it looks like it' }
-];
-
-const updates_en = [
-    { nr: 1, date: "1st of Jan, 2024", post: 1, title: 'a vase of wildflowers on a dining table', alt: 'dinner flower', summary: 'a vase of wildflowers. Wine in the background. Table is set for dinner' },
-    { nr: 2, date: "1st of Jan, 2024", post: 2, title: 'bushes obscouring mountain path', alt: 'mountain bushes', summary: 'there is a path here, but it is not visible' },
-    { nr: 3, date: "1st of Jan, 2024", post: 3, title: 'an islet on a lake', alt: 'lake islet', summary: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet' },
-    { nr: 4, date: "1st of Jan, 2024", post: 4, title: 'a platau', alt: 'a platau', summary: 'it is not a platau, but in this angle, it looks like it' }
-];
-
 /* post imgs */
 const postimg_no = [
     { postnr: 1, src: 'img_src/dinnerflower.JPG', title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
@@ -88,87 +56,111 @@ const container_element = document.getElementById("blogpost_wrapper");
 
 // when page is opened this will be run first so that the blogpost area will be
 // populated with posts at once
-/*
-updates_en.forEach(updatepost => {
+currentlang.forEach(post => {
+    //create article, apply grid-area for structure
+    const posttemplate = document.createElement('article');
+    posttemplate.classList.add('blogpost_grid');
 
-
-
-    const blogupdate = document.createElement('article'); 
-    blogupdate.classList.add('blogpost_grid');    
-    
     //child element - date
-    const date_container = document.createElement('div');
-    date_container.classList.add('blogpost_date');
+    const postdate = document.createElement('div');
+    postdate.classList.add('blogpost_date');
 
     const date_el = document.createElement('p');
-    date_el.innerHTML = updatepost.date;
-    date_container.appendChild(date_el);
+    date_el.innerHTML = post.date;
+    postdate.appendChild(date_el);
 
-    //*child element - title
-    const title_container = document.createElement('div');
-    title_container.classList.add('blogpost_title');
+    //child element - title
+    const posttitle = document.createElement('div');
+    posttitle.classList.add('blogpost_title');
 
     const title_el = document.createElement('h4');
-    title_el.innerHTML = updatepost.title;
-    title_container.appendChild(title_el);
+    title_el.innerHTML = post.title;
+    posttitle.appendChild(title_el);
 
     //child element - summary
-    const summary_container = document.createElement('div');
-    summary_container.classList.add('blogpost_summary');
+    const postsummary = document.createElement('div');
+    postsummary.classList.add('blogpost_summary');
 
     const summary_el = document.createElement('p');
-    summary_el.innerHTML = updatepost.summary;
-    summary_container.appendChild(summary_el);
+    summary_el.innerHTML = post.summary;
+    postsummary.appendChild(summary_el);
 
-    //child element - content
-    const content_container = document.createElement('div');
-    content_container.classList.add('blogpost_content');
+    //add content
+    //child element - content space
+    const content = document.createElement('div');
+    content.classList.add('blogpost_content');
 
-    const content_el = document.createElement('p');
-    content_el.innerHTML = updatepost.content;
-    content_container.appendChild(content_el);
+    postcontent_en.forEach(paragraph => {
+        if (post.postnr !== paragraph.postnr) { return; }
+        else {
+            const para = document.createElement('p');
+            para.innerHTML = paragraph.ctext;
+            content.appendChild(para);
+        }
+    })
 
-    //child element - gallery
-    const gallery_container = document.createElement('div');
-    gallery_container.classList.add('blogpost_gallery');
+    //add gallery
+    //child element - gallery space
+    //create box for gallery
+    const galleryaside = document.createElement('section');
+    galleryaside.classList.add('blogpost_gallery')
 
-    const gallery_el = document.createElement('img');
-    gallery_el.src = updatepost.src;
-    gallery_el.alt = updatepost.alt;
-    gallery_el.title = updatepost.title;
-    gallery_el.style.width = updatepost.width;
-    gallery_el.style.height = updatepost.height;
-    gallery_container.appendChild(gallery_el);
-    
-    //append child elements to blogpost
-    blogupdate.appendChild(date_container);
-    blogupdate.appendChild(title_container);
-    blogupdate.appendChild(summary_container);
-    blogupdate.appendChild(content_container);
-    blogupdate.appendChild(gallery_container);
+    postimg_en.forEach(image => {
+        if (post.postnr !== image.postnr) { return; }
+        else {
+            const smallgallery = document.createElement('div');
+            smallgallery.classList.add('illbox');
 
-    //append blogpost to wrapper
-    container_element.appendChild(blogupdate);
+            const pic = document.createElement('figure');
+            pic.classList.add('figureimg');
+
+            smallgallery.appendChild(pic);
+
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.alt = image.alt;
+            img.title = image.title;
+            img.style.width = image.width;
+            img.style.height = image.height;
+
+            pic.appendChild(img);
+
+            const description = document.createElement('figcaption');
+            description.classList.add('small_gallery_text');
+            description.innerHTML = image.ptext;
+
+            smallgallery.appendChild(description);
+
+            //append smallgallery to box for gallery
+            galleryaside.appendChild(smallgallery);
+        }
+    })
+
+    //append child elements to posttemplate
+    posttemplate.appendChild(postdate);
+    posttemplate.appendChild(posttitle);
+    posttemplate.appendChild(postsummary);
+    posttemplate.appendChild(content);
+    posttemplate.appendChild(galleryaside);
+
+    //append whole post to wrapper
+    container_element.appendChild(posttemplate);
 })
-*/
-
 
 function lang_change(current_lang) {
     // remove children as to not get appended posts
     container_element.innerHTML = '';
 
     if (current_lang == 'lang_no') {
-        // update_page(updates_no);
-        update_posts(postupdate_no);    
+        update_posts(postupdate_no, postcontent_no, postimg_no);    
     }
     else if (current_lang == 'lang_en') {
-        //update_page(updates_en);
-        update_posts(postupdate_en);    
+        update_posts(postupdate_en, postcontent_en, postimg_en);    
     }
 }
 
-function update_posts(currentlang) {
-    currentlang.forEach(post => {
+function update_posts(update, contentupdate, imageupdate) {
+    update.forEach(post => {
         //create article, apply grid-area for structure
         const posttemplate = document.createElement('article');
         posttemplate.classList.add('blogpost_grid');
@@ -202,7 +194,7 @@ function update_posts(currentlang) {
         const content = document.createElement('div');
         content.classList.add('blogpost_content');
 
-        postcontent_en.forEach(paragraph => {
+        contentupdate.forEach(paragraph => {
             if (post.postnr !== paragraph.postnr) { return; }
             else {
                 const para = document.createElement('p');
@@ -217,7 +209,7 @@ function update_posts(currentlang) {
         const galleryaside = document.createElement('section');
         galleryaside.classList.add('blogpost_gallery')
 
-        postimg_en.forEach(image => {
+        imageupdate.forEach(image => {
             if (post.postnr !== image.postnr) { return; }
             else {
                 const smallgallery = document.createElement('div');
@@ -257,62 +249,5 @@ function update_posts(currentlang) {
         
         //append whole post to wrapper
         container_element.appendChild(posttemplate);
-    })
-}
-
-function update_page(current_lang) {
-    current_lang.forEach(updatepost => {
-        const blogupdate = document.createElement('article');
-        blogupdate.classList.add('blogpost_grid');
-
-        //child element - date
-        const date_container = document.createElement('div');
-        date_container.classList.add('blogpost_date');
-
-        const date_el = document.createElement('p');
-        date_el.innerHTML = updatepost.date;
-        date_container.appendChild(date_el);
-
-        //child element - title
-        const title_container = document.createElement('div');
-        title_container.classList.add('blogpost_title');
-
-        const title_el = document.createElement('h4');
-        title_el.innerHTML = updatepost.title;
-        title_container.appendChild(title_el);
-
-        //child element - summary
-        const summary_container = document.createElement('div');
-        summary_container.classList.add('blogpost_summary');
-
-        const summary_el = document.createElement('p');
-        summary_el.innerHTML = updatepost.summary;
-        summary_container.appendChild(summary_el);
-
-        //child element - content
-        const content_container = document.createElement('div');
-        content_container.classList.add('blogpost_content');
-
-        const content_el = document.createElement('p');
-        content_el.innerHTML = updatepost.content;
-        content_container.appendChild(content_el);
-
-        //child element - gallery
-        const gallery_container = document.createElement('div');
-        gallery_container.classList.add('blogpost_gallery');
-
-        const gallery_el = document.createElement('p');
-        gallery_el.innerHTML = updatepost.gallery;
-        gallery_container.appendChild(gallery_el);
-
-        //append child elements to blogpost
-        blogupdate.appendChild(date_container);
-        blogupdate.appendChild(title_container);
-        blogupdate.appendChild(summary_container);
-        blogupdate.appendChild(content_container);
-        blogupdate.appendChild(gallery_container);
-
-        //append blogpost to wrapper
-        container_element.appendChild(blogupdate);
     })
 }
