@@ -28,7 +28,7 @@ complete_gallery.forEach(pic => {
 
     /*child element - p*/
     const pic_dec = document.createElement('figcaption');
-    pic_dec.classList.add('small_gallery_text')
+    pic_dec.classList.add('small_gallery_text');
     pic_dec.innerHTML = pic.ptext;
 
     /*append child elements to illbox*/
