@@ -124,6 +124,7 @@ footer {
     width: 100%;
     height: auto;
     max-height: 400px;
+    overflow-y: hidden;
     background-color: lightblue;
     margin: 2px 2px 0px 3px;
     display: grid;
