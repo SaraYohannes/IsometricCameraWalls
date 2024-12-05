@@ -214,7 +214,7 @@ function update_posts(currentlang) {
         //add gallery
         //child element - gallery space
         const smallgallery = document.createElement('div');
-        smallgallery.classList('illbox');
+        smallgallery.classList.add('illbox');
 
         postimg_en.forEach(image => {
             if (post.postnr !== image.postnr) { return; }
