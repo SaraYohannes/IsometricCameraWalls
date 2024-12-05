@@ -158,10 +158,12 @@ function lang_change(current_lang) {
     container_element.innerHTML = '';
 
     if (current_lang == 'lang_no') {
-        update_page(updates_no);
+        // update_page(updates_no);
+        update_posts(postupdate_no);    
     }
     else if (current_lang == 'lang_en') {
-        update_page(updates_en);
+        //update_page(updates_en);
+        update_posts(postupdate_en);    
     }
 }
 
