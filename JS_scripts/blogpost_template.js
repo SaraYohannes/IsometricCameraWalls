@@ -1,11 +1,12 @@
+/* arrays */
 /* post imgs */
 const postimg_no = [
-    { postnr: 1, src: 'img_src/dinnerflower.JPG', title: 'en vase med blomster på et middagsbord', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
-    { postnr: 1, src: 'img_src/rivercrossing.JPG', title: 'et sted å krysse elven', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
+    { postnr: 1, src: 'img_src/dinnerflower.JPG', title: 'en vase med blomster pÃ¥ et middagsbord', alt: 'dinner flower', ptext: 'a vase of wildflowers. Wine in the background. Table is set for dinner', width: "100%", height: "100%" },
+    { postnr: 1, src: 'img_src/rivercrossing.JPG', title: 'et sted Ã¥ krysse elven', alt: 'river crossing', ptext: 'a place to cross the river. Not safe', width: "100%", height: "100%" },
     { postnr: 1, src: 'img_src/mountainbush.JPG', title: 'busker som skygger for stien', alt: 'mountain bushes', ptext: 'there is a path here, but it is not visible', width: "100%", height: "100%" },
-    { postnr: 2, src: 'img_src/lakeislet.JPG', title: 'en liten øy i en innsjø', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
-    { postnr: 3, src: 'img_src/redberry.JPG', title: 'et umodent bær', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
-    { postnr: 3, src: 'img_src/plataugrassy.JPG', title: 'et platå', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
+    { postnr: 2, src: 'img_src/lakeislet.JPG', title: 'en liten Ã¸y i en innsjÃ¸', alt: 'lake islet', ptext: 'its not an islet, but it is a lake. The small rock could in this picture look like an islet', width: "100%", height: "100%" },
+    { postnr: 3, src: 'img_src/redberry.JPG', title: 'et umodent bÃ¦r', alt: 'red berry', ptext: 'a marsh berry. It is not ripe', width: "100%", height: "100%" },
+    { postnr: 3, src: 'img_src/plataugrassy.JPG', title: 'et platÃ¥', alt: 'a platau', ptext: 'it is not a platau, but in this angle, it looks like it', width: "100%", height: "100%" }
 ];
 
 const postimg_en = [
@@ -41,9 +42,9 @@ const postcontent_en = [
 ]
 /* post updates */
 const postupdate_no = [
-    { postnr: 1, date: "01.12.2024", title: "begynnelsen på advent", summary: "utgreiing om begynnelsen på advent og hvordan den påvirker økonomien" },
-    { postnr: 2, date: "12.12.2024", title: "møte mennesker", summary: "hva er det med denne måned som gjør at man møter masse folk i ubekvemme situasjoner?" },
-    { postnr: 3, date: "30.12.2024", title: "det nye året", summary: "refleksjoner på året som har gått og håp for det nye året" }
+    { postnr: 1, date: "01.12.2024", title: "begynnelsen pÃ¥ advent", summary: "utgreiing om begynnelsen pÃ¥ advent og hvordan den pÃ¥virker Ã¸konomien" },
+    { postnr: 2, date: "12.12.2024", title: "mÃ¸te mennesker", summary: "hva er det med denne mÃ¥ned som gjÃ¸r at man mÃ¸ter masse folk i ubekvemme situasjoner?" },
+    { postnr: 3, date: "30.12.2024", title: "det nye Ã¥ret", summary: "refleksjoner pÃ¥ Ã¥ret som har gÃ¥tt og hÃ¥p for det nye Ã¥ret" }
 ]
 
 const postupdate_en = [
@@ -51,7 +52,8 @@ const postupdate_en = [
     { postnr: 2, date: "12.12.2024", title: "meeting people", summary: "what is it about the last month of the year which makes us meet awkwardly on the streets?" },
     { postnr: 3, date: "30.12.2024", title: "the new year", summary: "reflections on the year which has passed and hopes for the future year" }
 ];
-  
+
+/* adding HTML */  
 const container_element = document.getElementById("blogpost_wrapper");
 
 // when page is opened this will be run first so that the blogpost area will be
@@ -147,12 +149,14 @@ postupdate_en.forEach(post => {
     container_element.appendChild(posttemplate);
 })
 
+/* change language w button prompt from header in index file */
 function lang_change(current_lang) {
     // remove children as to not get appended posts
     container_element.innerHTML = '';
 
     if (current_lang == 'lang_no') {
         update_posts(postupdate_no, postcontent_no, postimg_no);    
+
     }
     else if (current_lang == 'lang_en') {
         update_posts(postupdate_en, postcontent_en, postimg_en);    
