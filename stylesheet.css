@@ -116,7 +116,7 @@ footer {
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: auto;
+    /*height: auto;*/
     max-height: 500px;
     direction: ltr;
 }
