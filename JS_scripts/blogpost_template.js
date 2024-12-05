@@ -215,7 +215,7 @@ function update_posts(currentlang) {
         smallgallery.classList('illbox');
 
         postimg_en.forEach(image => {
-            if (post.postnr !== image.postnr) { break; }
+            if (post.postnr !== image.postnr) { return; }
             else {
                 const pic = document.createElement('figure');
                 pic.classList.add('figureimg');
