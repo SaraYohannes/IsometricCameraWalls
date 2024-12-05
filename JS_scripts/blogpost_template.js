@@ -201,7 +201,7 @@ function update_posts(currentlang) {
         content.classList.add('blogpost_content');
 
         postcontent_en.forEach(paragraph => {
-            if (post.postnr !== paragraph.postnr) { break; }
+            if (post.postnr !== paragraph.postnr) { return; }
             else {
                 const para = document.createElement('p');
                 para.innerHTML = paragraph.ctext;
