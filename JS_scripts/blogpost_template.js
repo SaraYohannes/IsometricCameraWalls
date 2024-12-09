@@ -155,10 +155,12 @@ function lang_change(current_lang) {
     container_element.innerHTML = '';
 
     if (current_lang == 'lang_no') {
+        document.documentElement.lang = 'no';
         update_posts(postupdate_no, postcontent_no, postimg_no);    
 
     }
     else if (current_lang == 'lang_en') {
+        document.documentElement.lang = 'en';
         update_posts(postupdate_en, postcontent_en, postimg_en);    
     }
 }
