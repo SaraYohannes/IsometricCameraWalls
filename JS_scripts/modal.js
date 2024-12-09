@@ -4,9 +4,9 @@ function open_large_gallery() {
     // if section w class 'galleryModal' exists, clean it and add a new one
 
 
-    if (document.querySelector('galleryModal'))
+    if (document.querySelector('.galleryModal'))
     {
-        let clean = document.querySelector('galleryModal');
+        let clean = document.querySelector('.galleryModal');
         clean.remove();
     }
 
