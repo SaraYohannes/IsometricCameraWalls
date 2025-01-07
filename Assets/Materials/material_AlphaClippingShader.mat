@@ -44,7 +44,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _ClipTreshold: 0.272
+    - _ClipTreshold: 0.727
     m_Colors:
     - _TestColor: {r: 0.8584906, g: 0.5684935, b: 0.1511807, a: 0}
   m_BuildTextureStacks: []
